@@ -1,0 +1,57 @@
+.user-form {
+    padding-bottom: 20px;
+
+    &__label,
+    &__input,
+    &__btn {
+        box-sizing: border-box;
+        border-radius: 4px;
+        outline: none;
+        font-size: 16px;
+    }
+
+    &__label {
+        width: 100%;
+        padding-bottom: 8px;
+        line-height: 30px;
+        color: #42275a;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__input {
+        display: inline-block;
+        width: 80px;
+        padding: 8px;
+        border:  2px solid #42275a;
+        text-align: right;
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+        background-image: linear-gradient(135deg, #734b6d, #42275a);
+        color: #fff;
+        border: 0;
+        padding: 12px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: transform .2s ease;
+
+        &:active {
+            background: #42275a;
+            transform: scale(0.96);
+        }
+
+        &:disabled {
+            opacity: .6;
+        }
+    }
+
+    &__error {
+        color: #800;
+        line-height: 20px;
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+}

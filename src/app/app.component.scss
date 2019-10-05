@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 20px;
+
+    &__content {
+        width: 300px;
+        box-sizing: border-box;
+    }
+}

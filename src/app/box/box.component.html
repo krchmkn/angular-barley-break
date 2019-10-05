@@ -1,0 +1,9 @@
+<div>Step: {{ step }} | Bones: {{ bonesCount }}</div>
+<div>Click on item to move</div>
+<div class="box" [ngClass]="{'box--inactive': !isGameStarted }">
+    <div *ngFor="let bone of bones" 
+        class="box__item"
+        [ngClass]="{'box__item--empty': !bone }"
+        (click)="moveBone(bone)"
+    >{{ bone }}</div>
+</div>

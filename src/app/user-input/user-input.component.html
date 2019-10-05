@@ -1,0 +1,35 @@
+<form [formGroup]="form" 
+    class="user-form" 
+    (ngSubmit)="onSubmit()" 
+    novalidate
+>
+    <label class="user-form__label">
+        Bones count
+        <input type="number" 
+            class="user-form__input" 
+            formControlName="bonesCount" 
+        />
+    </label>
+
+    <div *ngIf="form.get('bonesCount').invalid" class="user-form__error">
+        Bones count must be an odd number (max 99), 
+        and correspond to the following formula: (N + 1) % 4 equals 0
+    </div>
+
+    <label class="user-form__label">
+        Shuffle that much bones
+        <input type="number" 
+            class="user-form__input" 
+            formControlName="bonesToShuffle"
+        />
+    </label>
+    <div *ngIf="form.get('bonesToShuffle').invalid || this.form.errors && this.form.errors.bonesToShuffle" 
+        class="user-form__error">
+        Bones to shuffle quantity must be greater 
+        than zero and less than or equal to bones count.
+    </div>
+
+    <button type="submit" 
+        class="user-form__btn"
+        [disabled]="form.invalid">Start game</button>
+</form>
