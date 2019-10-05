@@ -1,6 +1,8 @@
 # AngularBarleyBreak
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.7.
+
+Watch [here](https://angular-barley-break.firebaseapp.com/)
+<br/><br/><br/><br/>
 
 ## Development server
 
